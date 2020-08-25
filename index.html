@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="matter.js"></script>
+
+    <script src="js/form.js"></script>
+    <script src="js/user.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCbJsDA0rFcrE0c6g3kXJZCsr7fqm_AlLQ",
+    authDomain: "art-project-ee133.firebaseapp.com",
+    databaseURL: "https://art-project-ee133.firebaseio.com",
+    projectId: "art-project-ee133",
+    storageBucket: "art-project-ee133.appspot.com",
+    messagingSenderId: "1014146686707",
+    appId: "1:1014146686707:web:c7a3f24e412c8ba76fe186"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+</script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+</head>
+<body>
+  <div id="canvascontainer">
+
+  <script src="sketch.js"></script>
+
+  </div>
+    <p>
+        <button id="saveButton">Save Drawing</button>
+        <button id="clearButton">Clear Drawing</button>
+      
+       
+    </p>
+</body>
+</html>
