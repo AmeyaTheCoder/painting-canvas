@@ -20,12 +20,12 @@ class Form {
          background(backgroundImg);
        }
         this.title.html("Art canvas");
-        this.title.position(displayWidth/2-50,0);
+        this.title.position(width/2-50,0);
 
-        this.input.position(displayWidth/2-40,displayHeight/2-80);
-        this.button.position(displayWidth/2+30,displayHeight/2);
+        this.input.position(width/2-40,height/2-80);
+        this.button.position(width/2+30,height/2);
 
-        this.button2.position(displayWidth-90,500)
+        this.button2.position(width-90,500)
 
        // this.button2.mousePressed(()=>{
         //    gameState = 2;
@@ -37,7 +37,7 @@ class Form {
             this.button.hide();
             user.name =this.input.value();
             this.greeting.html("Welcome " + user.name + " and display your talent!!" )
-            this.greeting.position(displayWidth/2 + 120,40);
+            this.greeting.position(width/2 + 120,40);
 
         })
     }
