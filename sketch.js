@@ -13,7 +13,7 @@ var colorPicker2;
 
 var sel;
 
-var eraser
+var eraser;
 
 function preload() {
   backgroundImg = loadImage("lionart.png");
