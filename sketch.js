@@ -56,7 +56,7 @@ function setup(){
   clearButton.mousePressed(clearDrawing);
 
   var showButton = select('#showButton');
-  showButton.mousePressed(gotData);
+  //showButton.mousePressed(gotData);
 }
 
 function startPath() {
