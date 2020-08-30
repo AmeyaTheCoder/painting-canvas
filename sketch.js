@@ -20,17 +20,17 @@ function preload() {
 }
 
 function setup(){
-  var canvas = createCanvas(displayWidth,displayHeight);
+  var canvas = createCanvas(window.innerWidth,window.innerHeight);
   database = firebase.database();
   
    colorPicker = createColorPicker(255)
-   colorPicker.position(displayWidth-90,200);
+   colorPicker.position(width-90,200);
 
    colorPicker2 = createColorPicker(0)
-   colorPicker2.position(displayWidth-90,300);
+   colorPicker2.position(width-90,300);
  
    sel  = createSelect();
-   sel.position(displayWidth-80,400)
+   sel.position(width-80,400)
    sel.option('1')
    sel.option('2')
    sel.option('3')
@@ -55,7 +55,8 @@ function setup(){
   var clearButton = select('#clearButton');
   clearButton.mousePressed(clearDrawing);
 
- 
+  var showButton = select('#showButton');
+  showButton.mousePressed(gotData);
 }
 
 function startPath() {
@@ -102,17 +103,17 @@ function draw(){
    textSize(12)
    fill(0)
    noStroke()
-   text("Background Picker",displayWidth-130,180)
+   text("Background Picker",width-130,180)
 
    textSize(12)
    fill(0)
    noStroke()
-   text("Stroke Picker",displayWidth-120,280)
+   text("Stroke Picker",width-120,280)
 
    textSize(12)
    fill(0)
    noStroke()
-   text("Stroke Size",displayWidth-110,380)
+   text("Stroke Size",width-110,380)
   
 }
 
@@ -138,13 +139,13 @@ function clearDrawing() {
 }
 
 function gotData(data) {
-var drawings = data.val();
-var keys = object.keys(drawings);
+drawing = data.val();
+var keys = object.keys(drawing);
 for(var i =0;i<keys.length;i++){
   var key = keys[i];
   var li = createElement('li','')
   var  ahref = createA('#',key);
-  ahref.mousePressed(showDrawing);
+  ahref.mousePressed(showDrawing());
   ahref.parent(li);
   li.parent('drawingList')
 
